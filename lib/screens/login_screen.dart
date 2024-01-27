@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tlp_rabta/screens/home_screen.dart';
+import 'package:tlp_rabta/screens/search_category.dart';
 import 'package:tlp_rabta/screens/signup_screen.dart';
 import 'package:tlp_rabta/utils/default_button.dart';
 import 'package:tlp_rabta/utils/detault_text_form_fields.dart';
@@ -109,6 +111,14 @@ class _LogInScreenState extends State<LogInScreen> {
                           color: Colors.white,
                           fontSize: 19,
                         ),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const HomeScreen(),
+                            ),
+                          );
+                        },
                       ),
                       const SizedBox(
                         height: 10,
@@ -123,6 +133,14 @@ class _LogInScreenState extends State<LogInScreen> {
                           color: Colors.white,
                           fontSize: 19,
                         ),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const SearchHalqaScreen(),
+                            ),
+                          );
+                        },
                       ),
                       const SizedBox(
                         height: 10,

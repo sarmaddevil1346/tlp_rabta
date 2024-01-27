@@ -6,11 +6,11 @@ class DefaultButton extends StatelessWidget {
       required this.text,
       this.boxDecoration,
       required this.textStyle,
-      this.onTap});
+      required this.onTap});
   final String text;
   final BoxDecoration? boxDecoration;
   final TextStyle? textStyle;
-  final VoidCallback? onTap;
+  final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
     return Container(

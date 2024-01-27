@@ -32,17 +32,17 @@ class _SearchHalqaScreenState extends State<SearchHalqaScreen> {
                       onTap: () {
                         Navigator.pop(context);
                       },
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         color: Colors.white,
                       ),
                     ),
                   ),
-                  Text(
+                  const Text(
                     "Tehreek-e-Labbaik Pakistan",
                     style: TextStyle(color: Colors.white),
                   ),
-                  Text(
+                  const Text(
                     "تحریک لبیک پاکستان",
                     style: TextStyle(color: Colors.white),
                   )
@@ -53,7 +53,7 @@ class _SearchHalqaScreenState extends State<SearchHalqaScreen> {
               ),
               Expanded(
                 child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
                     height: double.infinity,
                     width: double.infinity,
                     decoration: const BoxDecoration(
@@ -75,31 +75,32 @@ class _SearchHalqaScreenState extends State<SearchHalqaScreen> {
                             ),
                             child: Column(
                               children: [
-                                Text(
+                                const Text(
                                   "Constituency / Halqa / City ",
                                   style: TextStyle(color: Colors.white54),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 20,
                                 ),
                                 DefaultTextFields(
                                   labelText:
                                       'Type e.g: NA-46 ,ICT , NA-18 Haripur',
-                                  borderRadius: OutlineInputBorder(),
+                                  borderRadius: const OutlineInputBorder(),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 20,
                                 ),
                                 DefaultButton(
-                                    boxDecoration: BoxDecoration(
-                                        color: Colors.red,
-                                        borderRadius:
-                                            BorderRadius.circular(20)),
-                                    text: "Search",
-                                    textStyle: TextStyle(
-                                        fontSize: 18,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w600))
+                                  boxDecoration: BoxDecoration(
+                                      color: Colors.red,
+                                      borderRadius: BorderRadius.circular(20)),
+                                  text: "Search",
+                                  textStyle: const TextStyle(
+                                      fontSize: 18,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w600),
+                                  onTap: () {},
+                                )
                               ],
                             ),
                           ),
