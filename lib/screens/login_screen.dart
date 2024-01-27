@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tlp_rabta/screens/signup_screen.dart';
 import 'package:tlp_rabta/utils/default_button.dart';
 import 'package:tlp_rabta/utils/detault_text_form_fields.dart';
 
@@ -44,73 +45,114 @@ class _LogInScreenState extends State<LogInScreen> {
               const SizedBox(
                 height: 60,
               ),
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                height: 500,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Column(
-                  children: [
-                    const Text(
-                      "Sign In",
-                      style: TextStyle(),
-                    ),
-                    DefaultTextFields(
-                      labelText: "CNIC / NICOP / POC",
-                      borderRadius: OutlineInputBorder(
-                          borderSide: const BorderSide(color: Colors.black),
-                          borderRadius: BorderRadius.circular(20)),
-                    ),
-                    DefaultTextFields(
-                      labelText: "Password",
-                      borderRadius: OutlineInputBorder(
-                          borderSide: const BorderSide(color: Colors.black),
-                          borderRadius: BorderRadius.circular(20)),
-                      icon: const Icon(Icons.visibility),
-                    ),
-                    Align(
-                      alignment: Alignment.topRight,
-                      child: const Text(
-                        "Forgot Passwords",
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  height: 500,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Column(
+                    children: [
+                      const SizedBox(
+                        height: 10,
                       ),
-                    ),
-                    DefaultButton(
-                      text: 'LOGIN',
-                      boxDecoration: BoxDecoration(
-                        color: Colors.red,
-                        borderRadius: BorderRadius.circular(20),
+                      const Text(
+                        "Sign In",
+                        style: TextStyle(
+                            fontSize: 22, fontWeight: FontWeight.w700),
                       ),
-                      textStyle: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 19,
+                      const SizedBox(
+                        height: 10,
                       ),
-                    ),
-                    DefaultButton(
-                      text: 'TLP Candidate Symbol Search',
-                      boxDecoration: BoxDecoration(
-                        color: Colors.green,
-                        borderRadius: BorderRadius.circular(20),
+                      DefaultTextFields(
+                        labelText: "CNIC / NICOP / POC",
+                        borderRadius: OutlineInputBorder(
+                            borderSide: const BorderSide(color: Colors.black),
+                            borderRadius: BorderRadius.circular(40)),
                       ),
-                      textStyle: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 19,
+                      const SizedBox(
+                        height: 10,
                       ),
-                    ),
-                    const Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text("Don't have an account?"),
-                        Text(
-                          "Register Yours",
-                          style: TextStyle(color: Colors.red),
+                      DefaultTextFields(
+                        labelText: "Password",
+                        borderRadius: OutlineInputBorder(
+                            borderSide: const BorderSide(color: Colors.black),
+                            borderRadius: BorderRadius.circular(40)),
+                        icon: const Icon(Icons.visibility),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Align(
+                        alignment: Alignment.topRight,
+                        child: InkWell(
+                          onTap: () {},
+                          child: const Text(
+                            "Forgot Passwords",
+                          ),
                         ),
-                      ],
-                    )
-                  ],
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      DefaultButton(
+                        text: 'LOGIN',
+                        boxDecoration: BoxDecoration(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        textStyle: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 19,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      DefaultButton(
+                        text: 'TLP Candidate Symbol Search',
+                        boxDecoration: BoxDecoration(
+                          color: Colors.green,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        textStyle: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 19,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text("Don't have an account?"),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const SignUpScreen(),
+                                ),
+                              );
+                            },
+                            child: const Text(
+                              "Register Here",
+                              style: TextStyle(color: Colors.red),
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               )
             ],
