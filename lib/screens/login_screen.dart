@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tlp_rabta/screens/forget_screen.dart';
 import 'package:tlp_rabta/screens/home_screen.dart';
 import 'package:tlp_rabta/screens/search_category.dart';
 import 'package:tlp_rabta/screens/signup_screen.dart';
@@ -92,7 +93,14 @@ class _LogInScreenState extends State<LogInScreen> {
                       Align(
                         alignment: Alignment.topRight,
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ForgetScreen(),
+                              ),
+                            );
+                          },
                           child: const Text(
                             "Forgot Passwords",
                           ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class DefaultTextFields extends StatelessWidget {
+class DefaultTextFields extends StatefulWidget {
   DefaultTextFields(
       {super.key,
       required this.labelText,
@@ -15,14 +15,19 @@ class DefaultTextFields extends StatelessWidget {
   Icon? icon;
 
   @override
+  State<DefaultTextFields> createState() => _DefaultTextFieldsState();
+}
+
+class _DefaultTextFieldsState extends State<DefaultTextFields> {
+  @override
   Widget build(BuildContext context) {
     return TextFormField(
-      obscureText: obscureText,
+      obscureText: widget.obscureText,
       decoration: InputDecoration(
-        filled: filled,
-        border: borderRadius,
-        labelText: labelText,
-        suffixIcon: icon,
+        filled: widget.filled,
+        border: widget.borderRadius,
+        labelText: widget.labelText,
+        suffixIcon: widget.icon,
       ),
     );
   }

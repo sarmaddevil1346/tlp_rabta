@@ -13,15 +13,18 @@ class DefaultButton extends StatelessWidget {
   final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 70,
-      width: double.infinity,
-      decoration: boxDecoration,
-      child: Center(
-          child: Text(
-        text,
-        style: textStyle,
-      )),
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        height: 70,
+        width: double.infinity,
+        decoration: boxDecoration,
+        child: Center(
+            child: Text(
+          text,
+          style: textStyle,
+        )),
+      ),
     );
   }
 }
