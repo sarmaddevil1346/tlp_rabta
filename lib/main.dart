@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tlp_rabta/screens/forget_screen.dart';
 import 'package:tlp_rabta/screens/login_screen.dart';
-import 'package:tlp_rabta/screens/search_category.dart';
+import 'package:tlp_rabta/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,6 +18,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const LogInScreen());
+        home: const SplashScreen());
   }
 }

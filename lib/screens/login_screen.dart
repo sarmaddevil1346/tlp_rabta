@@ -28,160 +28,162 @@ class _LogInScreenState extends State<LogInScreen> {
                 image: AssetImage("assets/images/background.jpg"))),
         child: Scaffold(
           backgroundColor: Colors.transparent,
-          body: Column(
-            children: [
-              const SizedBox(
-                height: 60,
-              ),
-              Center(
-                child: Container(
-                  height: 200,
-                  width: 200,
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage("assets/images/logo.png"),
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                const SizedBox(
+                  height: 60,
+                ),
+                Center(
+                  child: Container(
+                    height: 200,
+                    width: 200,
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage("assets/images/logo.png"),
+                      ),
                     ),
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: 60,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  height: 500,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Column(
-                    children: [
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      const Text(
-                        "Sign In",
-                        style: TextStyle(
-                            fontSize: 22, fontWeight: FontWeight.w700),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      DefaultTextFields(
-                        labelText: "CNIC / NICOP / POC",
-                        borderRadius: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Colors.black),
-                            borderRadius: BorderRadius.circular(40)),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      DefaultTextFields(
-                        labelText: "Password",
-                        borderRadius: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Colors.black),
-                            borderRadius: BorderRadius.circular(40)),
-                        icon: const Icon(Icons.visibility),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Align(
-                        alignment: Alignment.topRight,
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => ForgetScreen(),
-                              ),
-                            );
-                          },
-                          child: const Text(
-                            "Forgot Passwords",
-                          ),
+                const SizedBox(
+                  height: 60,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    height: 500,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Column(
+                      children: [
+                        const SizedBox(
+                          height: 10,
                         ),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      DefaultButton(
-                        text: 'LOGIN',
-                        boxDecoration: BoxDecoration(
-                          color: Colors.red,
-                          borderRadius: BorderRadius.circular(20),
+                        const Text(
+                          "Sign In",
+                          style: TextStyle(
+                              fontSize: 22, fontWeight: FontWeight.w700),
                         ),
-                        textStyle: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 19,
+                        const SizedBox(
+                          height: 10,
                         ),
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const HomeScreen(),
-                            ),
-                          );
-                        },
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      DefaultButton(
-                        text: 'TLP Candidate Symbol Search',
-                        boxDecoration: BoxDecoration(
-                          color: Colors.green,
-                          borderRadius: BorderRadius.circular(20),
+                        DefaultTextFields(
+                          labelText: "CNIC / NICOP / POC",
+                          borderRadius: OutlineInputBorder(
+                              borderSide: const BorderSide(color: Colors.black),
+                              borderRadius: BorderRadius.circular(40)),
                         ),
-                        textStyle: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 19,
+                        const SizedBox(
+                          height: 10,
                         ),
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const SearchHalqaScreen(),
-                            ),
-                          );
-                        },
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text("Don't have an account?"),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          InkWell(
+                        DefaultTextFields(
+                          labelText: "Password",
+                          borderRadius: OutlineInputBorder(
+                              borderSide: const BorderSide(color: Colors.black),
+                              borderRadius: BorderRadius.circular(40)),
+                          icon: const Icon(Icons.visibility),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Align(
+                          alignment: Alignment.topRight,
+                          child: InkWell(
                             onTap: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const SignUpScreen(),
+                                  builder: (context) => ForgetScreen(),
                                 ),
                               );
                             },
                             child: const Text(
-                              "Register Here",
-                              style: TextStyle(color: Colors.red),
+                              "Forgot Passwords",
                             ),
                           ),
-                        ],
-                      )
-                    ],
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        DefaultButton(
+                          text: 'LOGIN',
+                          boxDecoration: BoxDecoration(
+                            color: Colors.red,
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          textStyle: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 19,
+                          ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const HomeScreen(),
+                              ),
+                            );
+                          },
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        DefaultButton(
+                          text: 'TLP Candidate Symbol Search',
+                          boxDecoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          textStyle: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 19,
+                          ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const SearchHalqaScreen(),
+                              ),
+                            );
+                          },
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text("Don't have an account?"),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const SignUpScreen(),
+                                  ),
+                                );
+                              },
+                              child: const Text(
+                                "Register Here",
+                                style: TextStyle(color: Colors.red),
+                              ),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
-                ),
-              )
-            ],
+                )
+              ],
+            ),
           ),
         ));
   }
