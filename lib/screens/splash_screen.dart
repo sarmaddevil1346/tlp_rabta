@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:tlp_rabta/screens/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -8,6 +11,19 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    Timer(Duration(seconds: 3), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => LogInScreen(),
+        ),
+      );
+    });
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,12 +35,13 @@ class _SplashScreenState extends State<SplashScreen> {
         backgroundColor: Colors.transparent,
         body: Column(
           children: [
-            Spacer(),
+            const Spacer(),
             Image.asset(
                 width: double.infinity, height: 250, "assets/images/5.png"),
-            Spacer(),
-            Image.asset("assets/images/labaik_logo.png"),
-            Spacer(),
+            const Spacer(),
+            Image.asset(
+                height: 300, width: double.infinity, "assets/images/4.png"),
+            const Spacer(),
           ],
         ),
       ),
