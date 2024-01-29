@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:badges/badges.dart' as badges;
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -16,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
@@ -32,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     child: const Icon(Icons.person_2_outlined),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   const Column(
@@ -52,13 +53,16 @@ class _HomeScreenState extends State<HomeScreen> {
                         border: Border.all(
                           color: Colors.black,
                         )),
-                    child: const Icon(Icons.notifications_outlined),
+                    child: badges.Badge(
+                        position: badges.BadgePosition.topEnd(top: 13, end: 13),
+                        child: const Center(
+                            child: Icon(Icons.notifications_outlined))),
                   ),
                 ],
               ),
-              Spacer(),
+              const Spacer(),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 height: 70,
                 width: double.infinity,
                 decoration: const BoxDecoration(
@@ -75,11 +79,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 height: 70,
                 width: double.infinity,
                 decoration: BoxDecoration(
@@ -96,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Expanded(
