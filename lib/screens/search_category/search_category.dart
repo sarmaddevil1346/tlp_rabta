@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tlp_rabta/utils/default_button.dart';
 
-import '../utils/detault_text_form_fields.dart';
+import '../../utils/detault_text_form_fields.dart';
 
 class SearchHalqaScreen extends StatefulWidget {
   const SearchHalqaScreen({super.key});

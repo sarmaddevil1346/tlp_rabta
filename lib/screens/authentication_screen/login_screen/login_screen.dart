@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:tlp_rabta/screens/forget_screen.dart';
-import 'package:tlp_rabta/screens/home_screen.dart';
-import 'package:tlp_rabta/screens/search_category.dart';
-import 'package:tlp_rabta/screens/signup_screen.dart';
+import 'package:tlp_rabta/screens/HomeScreen/home_screen.dart';
+import 'package:tlp_rabta/screens/search_category/search_category.dart';
 import 'package:tlp_rabta/utils/default_button.dart';
 import 'package:tlp_rabta/utils/detault_text_form_fields.dart';
+
+import '../forgot_password_screen/forget_screen.dart';
+import '../sign_up_screen/signup_screen.dart';
 
 class LogInScreen extends StatefulWidget {
   const LogInScreen({super.key});
@@ -98,7 +99,7 @@ class _LogInScreenState extends State<LogInScreen> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => ForgetScreen(),
+                                  builder: (context) => const ForgetScreen(),
                                 ),
                               );
                             },
