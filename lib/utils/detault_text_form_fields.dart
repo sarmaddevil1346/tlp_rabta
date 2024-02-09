@@ -1,33 +1,37 @@
 import 'package:flutter/material.dart';
 
-class DefaultTextFields extends StatefulWidget {
-  DefaultTextFields(
+class DefaultTextFields extends StatelessWidget {
+  const DefaultTextFields(
       {super.key,
       required this.labelText,
       this.borderRadius,
-      this.filled = false,
+      this.filled = true,
       this.icon,
-      this.obscureText = false});
-  String labelText;
-  OutlineInputBorder? borderRadius;
+      this.obscureText = false,
+      this.lines});
+
+  final String labelText;
+  final OutlineInputBorder? borderRadius;
   final bool? filled;
   final bool obscureText;
-  Icon? icon;
+  final Icon? icon;
+  final int? lines;
 
-  @override
-  State<DefaultTextFields> createState() => _DefaultTextFieldsState();
-}
-
-class _DefaultTextFieldsState extends State<DefaultTextFields> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      obscureText: widget.obscureText,
+      obscureText: obscureText,
+      maxLines: lines,
       decoration: InputDecoration(
-        filled: widget.filled,
-        border: widget.borderRadius,
-        labelText: widget.labelText,
-        suffixIcon: widget.icon,
+        fillColor: Colors.white10,
+        filled: filled,
+        border: const OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.black54,
+          ),
+        ),
+        labelText: labelText,
+        suffixIcon: icon,
       ),
     );
   }

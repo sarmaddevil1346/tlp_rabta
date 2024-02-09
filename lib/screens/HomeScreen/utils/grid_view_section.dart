@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../Models/grid_icons_models.dart';
 import '../../../Models/home_screen_models.dart';
 
 class BottomGridSection {
@@ -22,10 +23,24 @@ class BottomGridSection {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(Icons.person),
-                Text(
-                  getHomePageModels[index].title,
-                  textAlign: TextAlign.center,
+                const SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(bottomGridIcons[index]))),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Expanded(
+                  child: Text(
+                    getHomePageModels[index].title,
+                    textAlign: TextAlign.center,
+                  ),
                 ),
                 Text(getHomePageModels[index].percent.toString())
               ],
